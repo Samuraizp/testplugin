@@ -14,7 +14,6 @@ Class TestPlugin
     {
         $this->define_constants();
         $this->includes();
-        $this->init_hooks();
     }
     private function define_constants()
     {
@@ -22,6 +21,7 @@ Class TestPlugin
         $this->define('TEST_PLUGIN_DIR', untrailingslashit(dirname(TEST_PLUGIN)));
         $this->define('TEST_PLUGIN_URL', untrailingslashit(plugins_url('', TEST_PLUGIN)));
         $this->define('TEST_PLUGIN_ADMIN_URL', TEST_PLUGIN . '/admin');
+        $this->define('PLUGIN_SETTINGS_SLUG','test-plugin-options');
     }
     private function define($name, $value)
     {
@@ -37,10 +37,8 @@ Class TestPlugin
             include_once(TEST_ABSPATH . 'admin/admin.php');
         }
     }
-    private function init_hooks()
-    {
 
-    }
+
     public static function instance()
     {
         if (is_null(self::$_instance))

@@ -18,8 +18,10 @@ if (!class_exists('testPlugin'))
 {
     include_once dirname(TEST_PLUGIN) . '/includes/class-main-test.php';
 }
+
 function testPlugin()
 {
     return testPlugin::instance();
 }
-$GLOBALS['postIcons'] = testPlugin();
+
+$GLOBALS['testPlugin'] = testPlugin();
