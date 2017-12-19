@@ -75,7 +75,6 @@ if (!class_exists('TestAdmin', false)) :
         }
 
 
-
         public function adminPage()
         {
             if (!class_exists('Test_Helper'))
